@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/img/Favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-bar"></div>
+
+    <img onclick="home()" src="/img/VENI.png" alt="Veni Events Companion" class="logo-pages">
+    <img src="/img/Sidebar.png" alt="Menu" id="sidebar-toggle" class="sidebar-btn">
+    <img src="" alt="" class="top-right-profile" id="top-right-profile">
+
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img id="profile-pic" src="" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h1 id="profile-name">NAME</h1>
+                <p id="profile-role" class="profile-role">ROLE</p>
+            </div>
+        </div>
+        
+        <div class="profile-stats">
+            <button id="follow-btn" class="follow-button">Follow</button>
+            <div class="stats-box">
+                <span id="followers-count">0</span>
+                <p>Followers</p>
+            </div>
+            <div class="stats-divider"></div>
+            <div class="stats-box">
+                <span id="following-count">0</span>
+                <p>Following</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="post-container">
+        <div id="post-header-container">
+            <h1 id="post-header">Events</h1>
+        </div>
+    
+        <div id="posts-wrapper">
+            <div id="posts-container-containing">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="./home.html"><img src="/img/Home.png" alt="Home Icon"> Home</a></li>
+            <li><a href="./profile.html" onclick="profileOpen()" id="profile-link"><img src="/img/Profile.png" alt="Profile Icon"> Profile</a></li>
+            <li><a href="./create.html"><img src="/img/Post.png" alt="Post Icon"> Create</a></li>
+            <li><a href="#"><img src="/img/Settings.png" alt="Settings Icon"> Settings</a></li>
+            <li><a onclick="logout()"><img src="/img/Logout.png" alt="Logout Icon"> Logout</a></li>
+        </ul>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

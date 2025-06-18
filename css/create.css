@@ -1,0 +1,150 @@
+body {
+    font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
+}
+
+/* Container for Form & Preview */
+.post-wrapper {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    width: 90%;
+}
+
+/* Post Mockup Preview */
+.post-preview {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+}
+
+/* Preview Image */
+.preview-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Preview Text */
+.preview-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    word-wrap: break-word;
+    min-height: 50px;
+}
+
+.preview-title {
+    color: white;
+}
+
+#post-title {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    word-wrap: break-word;
+    resize: none;
+}
+
+
+/* Post Form */
+.create-post-container { /* Renamed from post-container */
+    flex: 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+}
+
+/* Post Form Layout */
+#post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Textarea */
+#post-content {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+#post-content::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
+}
+
+#post-title::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
+}
+
+/* Hide the default file input */
+#post-image {
+    display: none;
+}
+
+/* Style the label */
+.file-input-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add an upload icon (if using FontAwesome) */
+.file-input-label i {
+    font-size: 16px;
+}
+
+/* Hover effect */
+.file-input-label:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Post Button */
+button {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ff4500;
+    transform: scale(1.05);
+}

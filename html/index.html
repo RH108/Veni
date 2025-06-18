@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="icon" type="image/x-icon" href="/img/Favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="loading-bar"></div>
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="login-container">
+        <img src="/img/VENI.png" alt="Veni Events Companion" class="logo">
+
+        <div id="g_id_onload" data-client_id="711965293983-4g0ra7q68bnl03gg5kisiegpo5amabhe.apps.googleusercontent.com"
+            data-context="signin" data-ux_mode="popup" data-callback="handleCredentialResponse"
+            data-auto_prompt="false">
+        </div>
+
+        <!-- Google Login Button (Unchanged ID & Class) -->
+        <div id="google-signin-button" class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+            data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left" data-prompt="select_account">
+        </div>
+
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

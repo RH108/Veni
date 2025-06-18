@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/create.css">
+    <link rel="icon" type="image/x-icon" href="/img/Favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="loading-bar"></div>
+
+    <img onclick="home()" src="/img/VENI.png" alt="Veni Events Companion" class="logo-pages">
+    <img src="/img/Sidebar.png" alt="Menu" id="sidebar-toggle" class="sidebar-btn">
+    <img src="" alt="" class="top-right-profile" id="top-right-profile">
+
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="./home.html"><img src="/img/Home.png" alt="Home Icon"> Home</a></li>
+            <li><a href="./profile.html" onclick="profileOpen()" id="profile-link"><img src="/img/Profile.png"
+                        alt="Profile Icon"> Profile</a></li>
+            <li><a href="./create.html"><img src="/img/Post.png" alt="Post Icon"> Create</a></li>
+            <li><a href="#"><img src="/img/Settings.png" alt="Settings Icon"> Settings</a></li>
+            <li><a onclick="logout()"><img src="/img/Logout.png" alt="Logout Icon"> Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="post-wrapper">
+        <!-- Mockup Preview -->
+        <div class="post-preview">
+            <h2 class="preview-title" id="preview-title">Your Title Preview</h2>
+            <p class="preview-text" id="preview-text">Your post preview will appear here...</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/800px-Placeholder_view_vector.svg.png"
+                alt="Post Preview" class="preview-img" id="preview-img">
+        </div>
+
+        <!-- Post Form -->
+        <div class="create-post-container">
+            <h2 style="color: white;">Create a Post</h2>
+            <form id="post-form">
+                <input type="text" id="post-title" placeholder="Enter a title..." required>
+                <textarea id="post-content" placeholder="Write something..." required></textarea>
+                <label for="post-image" class="file-input-label">
+                    <i class="fas fa-upload"></i> Choose Image
+                </label>
+                <input type="file" id="post-image" accept="image/*">
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="/js/script.js"></script>
+    <script src="/js/create.js"></script> <!-- Separate script for handling posts -->
+</body>
+
+</html>

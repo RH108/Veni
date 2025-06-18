@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="icon" type="image/x-icon" href="/img/Favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="loading-bar"></div>
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <img src="/img/Sidebar.png" alt="Menu" id="sidebar-toggle" class="sidebar-btn">
+    <img id="searchElement" src="/img/VENI.png" alt="Veni Events Companion" class="logo-pages search-container">
+    <div id="searchBox" class="search-box">
+        <img src="/img/Search.png" alt="Search Icon">
+        <input autocomplete="off" type="text" id="searchInput" placeholder="Type here...">
+    </div>
+    <div id="suggestions" class="suggestions"></div>
+    <img src="" alt="" class="top-right-profile" id="top-right-profile">
+
+    <div id="featured-container">
+        <p id="featured-header">Featured Post</p>
+        <div id="mini-line"></div>
+        <h1 id="featured-container-title">STEM X Iskandar 2025</h1>
+        <h2 id="featured-author">By SMK Iskandar Shah</h2>
+    </div>
+
+    <div id="account-container-small">
+        <h1 id="account-header-small">Featured Accounts</h1>
+        <div id="account-content-small">
+
+        </div>
+    </div>
+
+
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="./home.html"><img src="/img/Home.png" alt="Home Icon"> Home</a></li>
+            <li><a href="./profile.html" onclick="profileOpen()" id="profile-link"><img src="/img/Profile.png"
+                        alt="Profile Icon"> Profile</a></li>
+            <li><a href="./create.html"><img src="/img/Post.png" alt="Post Icon"> Create</a></li>
+            <li><a href="#"><img src="/img/Settings.png" alt="Settings Icon"> Settings</a></li>
+            <li><a onclick="logout()"><img src="/img/Logout.png" alt="Logout Icon"> Logout</a></li>
+        </ul>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

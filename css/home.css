@@ -1,0 +1,253 @@
+#featured-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    background: url("https://media.discordapp.net/attachments/858994141010329610/1366941533571383367/WhatsApp_Image_2025-04-30_at_06.15.56_2e248484.jpg?ex=6812c702&is=68117582&hm=3d11d1bdde134f39936a52ccab20e0c86e4f14526f6907d73147bfc127b03227&=&format=webp&width=698&height=930") no-repeat center center;
+    background-size: cover;
+    padding: 20px 30px;
+    border-radius: 15px;
+    color: white;
+    max-width: 92%;
+    width: calc(100% - 50px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
+    gap: 0px;
+    flex-wrap: nowrap;
+    height: 40%;
+
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    position: fixed; /* Ensures child elements are positioned relative to this */
+}
+
+#featured-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(1, 40, 91), rgba(0, 0, 0, 0) 30%);
+    border-radius: 15px; /* Matches container */
+    pointer-events: none; /* Ensures interactions still work */
+}
+
+#featured-container.shifted {
+    margin-left: 125px;
+    width: calc(100% - 350px);
+}
+
+#featured-container p {
+    margin: 0px;
+    font-size: 24px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+#featured-container-title {
+    margin: 2px;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+    z-index: 2;
+}
+
+#featured-author {
+    margin: 2px;
+    font-size: 17px;
+    font-weight: bold;
+    top: -15px;
+    position: relative;
+    z-index: 2;
+}
+
+#mini-line {
+    width: 70px; /* Adjust width as needed */
+    height: 3px; /* Thickness of the line */
+    background-color: rgb(212, 71, 71); /* Line color */
+    margin: 0px 0; /* Space between the elements */
+    z-index: 2;
+}
+
+#featured-container-title-small {
+    display: block;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 0%;
+    z-index: 2;
+}
+
+#account-container-small {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px;
+    border-radius: 15px;
+    max-width: 92%;
+    width: calc(100% - 50px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
+    gap: 20px;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background: transparent;
+    color: white;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+#account-header-small {
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+/* Horizontal scrolling with touch support */
+#account-content-small {
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for WebKit browsers */
+#account-content-small::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-item-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 80px;
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+}
+
+.profile-pic-small {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid black;
+    object-fit: cover;
+}
+
+.username-small {
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 7px auto auto auto;
+}
+
+#account-container-small.shifted {
+    margin-left: 125px;
+    width: calc(100% - 350px);
+}
+
+/* Follow button styling */
+.follow-small {
+    margin-top: 12px;
+    padding: 5px 25px;
+    font-size: 13px;
+    font-weight: 300;
+    border: none;
+    border-radius: 3px;
+    background-color: #0e66c3;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.followed-small {
+    margin-top: 12px;
+    padding: 5px 25px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 3px;
+    border: 1px solid #0e66c3;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-color: transparent; /* Transparent background */
+}
+
+.follow-small:hover,
+.followed-small:hover {
+    background-color: #0077cc;
+}
+
+/* Responsiveness (WITHOUT changing positioning) */
+@media (max-width: 768px) {
+    #account-container-small {
+        width: 95%;
+    }
+
+    #account-content-small {
+        gap: 30px;
+    }
+
+    .profile-pic-small {
+        width: 70px;
+        height: 70px;
+    }
+
+    .username-small {
+        font-size: 11px;
+    }
+
+    .follow-small {
+        font-size: 11px;
+        padding: 4px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #account-container-small {
+        width: 100%;
+    }
+
+    #account-content-small {
+        gap: 20px;
+    }
+
+    .scroll-item-small {
+        min-width: 70px;
+        max-width: 75px;
+    }
+
+    .profile-pic-small {
+        width: 60px;
+        height: 60px;
+    }
+
+    .username-small {
+        font-size: 10px;
+    }
+
+    .follow-small {
+        font-size: 10px;
+        padding: 3px 12px;
+    }
+}
